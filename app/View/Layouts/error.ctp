@@ -14,41 +14,42 @@
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
 
+$cakeDescription = '.:::CuponMeal:::.';
 
 ?>
 <!DOCTYPE html>
 <html>
 <head>
-	<?php echo $this->Html->charset(); ?>
-	<title>
-		
-		<?php echo $this->fetch('title'); ?>
-	</title>
-	<?php
-		echo $this->Html->meta('icon');
 
-		// echo $this->Html->css('cake.generic');
+    <?= $this->Html->charset() ?>
+    <meta name="viewport" content="width=d
 
-		echo $this->fetch('meta');
-		echo $this->fetch('css');
-		echo $this->fetch('script');
-	?>
-</head>
+
+    evice-width, initial-scale=1.0">
+    <title>
+        <?= $cakeDescription ?>
+    </title>
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+
+    <?= $this->Html->css(['bootstrap','all.min','agency','estilos']) ?>
+
+    <?= $this->fetch('meta') ?>
+    <?= $this->fetch('css') ?>
+    <?= $this->fetch('script') ?>
+    </head>
 <body>
-	<div id="container">
-		<div id="header">
-			
-		</div>
-		<div id="content">
+    
+    
+    <div class="text-center">
+        <?= $this->fetch('content') ?>
+    </div>
+   
 
-			<?php echo $this->Session->flash(); ?>
+    <?= $this->Html->script(['jquery.min','bootstrap.bundle.min','jquery.easing.min','jqBootstrapValidation','contact_me.min','agency.min', 'script','jquery-3.3.1.min']); ?>
 
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		<div id="footer">
-			
-		</div>
-	</div>
-	<!-- <?php echo $this->element('sql_dump'); ?> -->
 </body>
 </html>
